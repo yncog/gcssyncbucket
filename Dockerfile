@@ -4,7 +4,7 @@ ENV MOUNT_PATH /gcssyncbucket/mnt
 WORKDIR /gcssyncbucket
 
 # Install helper packages
-RUN apt-get update && apt-get install -y lsb-release curl gnupg2
+RUN apt-get update && apt-get install -y lsb-release curl gnupg2 rsync
 
 # Add gcfuse key to APT
 RUN export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s` \
